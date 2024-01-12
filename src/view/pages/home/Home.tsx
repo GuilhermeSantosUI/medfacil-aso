@@ -3,8 +3,8 @@ import {
   ArrowUDownLeft,
   Brain,
   CalendarCheck,
-} from "@phosphor-icons/react";
-import * as C from "./Home.styles";
+} from '@phosphor-icons/react';
+import * as C from './Home.styles';
 
 export function Home() {
   return (

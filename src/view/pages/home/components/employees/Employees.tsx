@@ -1,5 +1,5 @@
-import { ArrowRight } from "@phosphor-icons/react";
-import * as C from "./Employees.styles";
+import { ArrowRight } from '@phosphor-icons/react';
+import * as C from './Employees.styles';
 
 export function Employees() {
   return (

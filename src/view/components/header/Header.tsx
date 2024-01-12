@@ -1,5 +1,5 @@
-import { MagnifyingGlass } from "@phosphor-icons/react";
-import * as C from "./Header.styles";
+import { MagnifyingGlass } from '@phosphor-icons/react';
+import * as C from './Header.styles';
 
 export function Header() {
   return (
@@ -10,15 +10,15 @@ export function Header() {
           <C.Logo>SSMA</C.Logo>
         </div>
 
-        <div style={{ position: "relative" }}>
+        <div style={{ position: 'relative' }}>
           <MagnifyingGlass
             size={16}
             color="#ababab"
             style={{
-              position: "absolute",
+              position: 'absolute',
               left: 10,
-              top: "50%",
-              transform: "translate(0, -50%)",
+              top: '50%',
+              transform: 'translate(0, -50%)',
             }}
           />
 
@@ -29,9 +29,9 @@ export function Header() {
               width: 240,
               padding: 10,
               borderRadius: 8,
-              border: "1px solid #efefef",
+              border: '1px solid #efefef',
               fontSize: 14,
-              color: "#8c8c8c",
+              color: '#8c8c8c',
               paddingLeft: 32,
             }}
           />

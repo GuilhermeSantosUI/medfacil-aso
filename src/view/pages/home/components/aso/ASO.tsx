@@ -1,9 +1,9 @@
-import * as C from './ASO.styles'
+import * as C from './ASO.styles';
 
-export function ASO(){
+export function ASO() {
   return (
     <C.Container>
       <h1>ASO</h1>
     </C.Container>
-  )
+  );
 }

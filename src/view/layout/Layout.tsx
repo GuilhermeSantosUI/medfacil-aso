@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
-import { Aside, Header } from "../components";
+import { Outlet } from 'react-router-dom';
+import { Aside, Header } from '../components';
 
-import * as C from "./Layout.styles";
+import * as C from './Layout.styles';
 
 export function Layout() {
   return (

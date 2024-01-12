@@ -1,8 +1,8 @@
-import { File, MagnifyingGlass } from "@phosphor-icons/react";
+import { File, MagnifyingGlass } from '@phosphor-icons/react';
 
-import { Employees, Preview } from "./components";
+import { Employees, Preview } from './components';
 
-import * as C from "./Aside.styles";
+import * as C from './Aside.styles';
 
 export function Aside() {
   return (
@@ -18,15 +18,15 @@ export function Aside() {
 
           <h3>Arquivos anexados</h3>
 
-          <div style={{ position: "relative" }}>
+          <div style={{ position: 'relative' }}>
             <MagnifyingGlass
               size={16}
               color="#ababab"
               style={{
-                position: "absolute",
+                position: 'absolute',
                 left: 10,
-                top: "50%",
-                transform: "translate(0, -50%)",
+                top: '50%',
+                transform: 'translate(0, -50%)',
               }}
             />
 
@@ -34,12 +34,12 @@ export function Aside() {
               type="text"
               placeholder="Pesquisar por nome..."
               style={{
-                width: "100%",
+                width: '100%',
                 padding: 10,
                 borderRadius: 8,
-                border: "1px solid #efefef",
+                border: '1px solid #efefef',
                 fontSize: 14,
-                color: "#8c8c8c",
+                color: '#8c8c8c',
                 paddingLeft: 32,
               }}
             />

@@ -1,4 +1,4 @@
-import * as C from "./Preview.styles";
+import * as C from './Preview.styles';
 
 export function Preview() {
   return (

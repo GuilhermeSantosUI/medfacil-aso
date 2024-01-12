@@ -3,7 +3,7 @@ import {
   CalendarBlank,
   CaretLeft,
   CaretRight,
-} from "@phosphor-icons/react";
+} from '@phosphor-icons/react';
 import {
   addDays,
   addMonths,
@@ -15,10 +15,10 @@ import {
   startOfMonth,
   startOfWeek,
   subMonths,
-} from "date-fns";
-import { useState } from "react";
-import { capitalizeFirstLetter } from "../../../../../app/utils";
-import * as C from "./Calendar.styles";
+} from 'date-fns';
+import { useState } from 'react';
+import { capitalizeFirstLetter } from '../../../../../app/utils';
+import * as C from './Calendar.styles';
 
 export function Calendar() {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
@@ -33,15 +33,14 @@ export function Calendar() {
         </C.InfoRow>
 
         <div className="header">
-          <h3>{capitalizeFirstLetter(format(activeDate, "MMMM yyyy"))}</h3>
+          <h3>{capitalizeFirstLetter(format(activeDate, 'MMMM yyyy'))}</h3>
 
           <div
             className="todayButton"
             onClick={() => {
               setSelectedDate(new Date());
               setActiveDate(new Date());
-            }}
-          >
+            }}>
             Hoje
           </div>
 
@@ -58,8 +57,8 @@ export function Calendar() {
     for (let day = 0; day < 7; day++) {
       weekDays.push(
         <div className="day weekNames" key={day}>
-          {capitalizeFirstLetter(format(addDays(weekStartDate, day), "EEEEEE"))}
-        </div>
+          {capitalizeFirstLetter(format(addDays(weekStartDate, day), 'EEEEEE'))}
+        </div>,
       );
     }
     return <div className="weekContainer">{weekDays}</div>;
@@ -68,7 +67,7 @@ export function Calendar() {
   const generateDatesForCurrentWeek = (
     date: Date,
     selectedDate: Date,
-    activeDate: Date
+    activeDate: Date,
   ) => {
     let currentDate = date;
     const week = [];
@@ -77,15 +76,14 @@ export function Calendar() {
       week.push(
         <div
           className={`day ${
-            isSameMonth(currentDate, activeDate) ? "" : "inactiveDay"
-          } ${isSameDay(currentDate, selectedDate) ? "selectedDay" : ""}
-          ${isSameDay(currentDate, new Date()) ? "today" : ""}`}
+            isSameMonth(currentDate, activeDate) ? '' : 'inactiveDay'
+          } ${isSameDay(currentDate, selectedDate) ? 'selectedDay' : ''}
+          ${isSameDay(currentDate, new Date()) ? 'today' : ''}`}
           onClick={() => {
             setSelectedDate(cloneDate);
-          }}
-        >
-          {format(currentDate, "d")}
-        </div>
+          }}>
+          {format(currentDate, 'd')}
+        </div>,
       );
       currentDate = addDays(currentDate, 1);
     }
@@ -104,7 +102,7 @@ export function Calendar() {
 
     while (currentDate <= endDate) {
       allWeeks.push(
-        generateDatesForCurrentWeek(currentDate, selectedDate, activeDate)
+        generateDatesForCurrentWeek(currentDate, selectedDate, activeDate),
       );
       currentDate = addDays(currentDate, 7);
     }
@@ -127,11 +125,10 @@ export function Calendar() {
       <div
         className="todayButton"
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}>
         Pesquisar
         <ArrowUpRight />
       </div>
