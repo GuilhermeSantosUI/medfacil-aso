@@ -19,11 +19,32 @@ export const ShadowTwo = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 72px 10px;
-  background-color: #2758a1;
+  height: 100%;
+  min-height: 150px;
+  padding: 16px;
+
+  background: radial-gradient(
+    98.53% 96.9% at 50% 50%,
+    #548de1 0%,
+    #2758a1 100%
+  );
   border-radius: 6px;
+
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 16px;
+
   color: #fff;
+
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 36px;
+    height: 36px;
+  }
 `;

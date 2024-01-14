@@ -1,6 +1,6 @@
 import * as C from './Preview.styles';
 
-import Image from '../../../../assets/logo.png';
+import Image from '../../../../../../assets/logo.png';
 
 export function Preview() {
   return (

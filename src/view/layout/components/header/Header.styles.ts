@@ -6,7 +6,7 @@ export const Container = styled.header`
 
   border-bottom: 1px solid #f2f2f2;
 
-  padding: 16px 20px;
+  padding: 10px 20px;
 `;
 
 export const HeaderLeftSide = styled.div`
@@ -37,8 +37,6 @@ export const Logo = styled.p`
 export const Username = styled.p`
   font-weight: 500;
   font-size: 16px;
-
-  margin-top: 6px;
 
   color: #232326;
 `;

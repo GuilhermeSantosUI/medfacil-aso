@@ -1,20 +1,20 @@
-import { Outlet } from 'react-router-dom';
-import { Aside, Header } from '../components';
+import { Header } from './components';
 
 import * as C from './Layout.styles';
 
-export function Layout() {
+import { Toaster } from '@/view/components/ui/sonner';
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export function Layout({ children }: LayoutProps) {
   return (
     <C.Container>
-      <C.Content>
-        <Header />
+      <Header />
 
-        <C.View>
-          <Outlet />
-        </C.View>
-      </C.Content>
-
-      <Aside />
+      <C.View>{children}</C.View>
+      <Toaster />
     </C.Container>
   );
 }

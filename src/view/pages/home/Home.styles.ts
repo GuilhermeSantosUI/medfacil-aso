@@ -1,6 +1,12 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
   table {
     width: 100%;
 
@@ -45,7 +51,14 @@ export const Container = styled.div`
   }
 `;
 
-export const About = styled.button`
+export const Content = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+`;
+
+export const About = styled(Link)`
   display: flex;
   padding: 10px;
 

@@ -5,7 +5,7 @@ export function Employees() {
   return (
     <C.Container>
       <C.Content>
-        <FilePdf size={32} color="red" />
+        <FilePdf size={24} weight='duotone' color="red" />
 
         <C.ContentText>
           <h4>TRANS- MUCONICO</h4>

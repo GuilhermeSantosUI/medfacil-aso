@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.aside`
   width: 100%;
-  max-width: 397px;
+  max-width: 400px;
   height: 100vh;
 
   border-left: 1px solid #f2f2f2;
@@ -11,18 +11,6 @@ export const Container = styled.aside`
   flex-flow: column;
 
   padding: 20px;
-`;
-
-export const InfoColumn = styled.div`
-  padding: 10px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
-
-export const InfoTitle = styled.p`
-  font-size: 14px;
 `;
 
 export const InfoContent = styled.div`

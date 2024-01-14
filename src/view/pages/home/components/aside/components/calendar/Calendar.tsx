@@ -4,6 +4,7 @@ import {
   CaretLeft,
   CaretRight,
 } from '@phosphor-icons/react';
+
 import {
   addDays,
   addMonths,
@@ -16,8 +17,12 @@ import {
   startOfWeek,
   subMonths,
 } from 'date-fns';
+
 import { useState } from 'react';
-import { capitalizeFirstLetter } from '../../../../../app/utils';
+
+import { toast } from 'sonner';
+
+import { capitalizeFirstLetter } from '@/app/utils';
 import * as C from './Calendar.styles';
 
 export function Calendar() {
@@ -114,6 +119,11 @@ export function Calendar() {
     );
   };
 
+  const promise = () =>
+    new Promise((resolve) =>
+      setTimeout(() => resolve({ name: 'Sonner' }), 2000),
+    );
+
   return (
     <C.Container>
       <div>
@@ -128,7 +138,16 @@ export function Calendar() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-        }}>
+        }}
+        onClick={() =>
+          toast.promise(promise, {
+            loading: "Procurando por ASO's",
+            success: () => {
+              return `5 Resultados encontrados`;
+            },
+            error: 'Error',
+          })
+        }>
         Pesquisar
         <ArrowUpRight />
       </div>
